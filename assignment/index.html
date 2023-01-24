@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>assignment</title>
+	<style>
+		/*general rule for the entire web page*/
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		/*navigation bar rule command*/
+		.nav-container{
+			background-color: #092f4b;
+			position: fixed;
+			width: 100%;
+			z-index: 10;
+		}
+		.navbar{
+			width: 70%;
+			max-width: 1350px;
+			margin: 0 auto;
+
+			display: flex;
+			justify-content: space-between;
+		}
+		.nav-brand h2{
+			padding: 10px 15px;
+			color: #fff;
+		}
+		.navbar-nav{
+			list-style-type: none;
+		}
+		.navbar-link{
+			display: inline-block;
+			padding:15px;
+		}
+		.navbar-link a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 1em;
+			font-weight: 300;
+		}
+		/*navigation link on hover*/
+		.navbar-link a:hover{
+			color: #ffc107;
+		}
+		.header-container{
+			background-color: #092f4b;
+			position: relative;
+			top: 45px;
+			padding: 15px 0;
+		}
+		/**/
+		header{
+			width: 70%;
+			max-width: 1350px;
+			margin: 0 auto;
+
+			display: flex;
+			justify-content: space-between;
+			gap: 15px;
+		}
+		.title{
+			width: 450px;
+			color: #fff;
+		}
+		.title h1{
+			font-size: 3em;
+			font-weight: 700;
+			padding-left: 15px;
+			padding-top: 20px;
+			margin-top: 50px;
+			font-family: Franklin Gothic Demi, sans-serif;
+		}
+		.title p{
+			font-size: 1em;
+			font-weight: 300;
+			padding-left: 15px;
+			padding-top: 20px;
+			line-height: 25px;
+		}
+		.title-img{
+			height: 400px;
+			width: 900px;
+		}
+		.title-img img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.title a button{
+			width: 200px;
+			font-size: 1.2em;
+			padding: 10px;
+			border-color: #fff;
+			border-radius: 7px;
+			background-color: #3882F6;
+			color: #fff;
+			margin: 30px 15px;
+			cursor: pointer;
+		}
+		.title a button:hover{
+`	color: ;
+		}
+		/**/
+		section{
+			position: relative;
+			top: 60px;
+			border: 1px solid #FFF;
+		}
+		.section-content{
+			width: 70%;
+			max-width: 1350px;
+			margin: 0 auto;
+			padding-bottom: 15px;
+		}
+		.section-content h2{
+			padding: 15px 0;
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		/**/
+		.gallery{
+			display: flex;
+			justify-content: space-around;
+		}
+		.img{
+			width: 300px;
+			height:minmax(300px, auto);
+		}
+		.img img{
+			width: 100%;
+			border: 3px solid #3882F6;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+		.img h3{
+			font-size: 1.2em;
+			padding: 10px 15px;
+			text-align: center;
+			font-weight: 700;
+		}
+		/**/
+		.section{
+			position: relative;
+			top: 60px;
+			background-color: #999;
+		}
+		.section-content-II{
+			margin: 75px auto;
+			width: 70%;
+		}
+		.section-content-II p{
+			font-size: 2.5em;
+			font-weight: 600;
+			padding: 20px 20px 0;
+		}
+		.section-content-II span{
+			font-size: 1em;
+			font-weight: bolder;
+			display: block;
+			text-align: right;
+			margin-right: 35px;
+			padding-bottom: 10px;
+		}
+		/*this is the css rule for the image catlogue gallery*/
+		.catlogue{
+			width: 70%;
+			height: 400px;
+			margin-inline: auto;
+			margin-top: 25px;
+			margin-bottom: 25px;
+
+			max-width: 1530px;
+			border-radius: 10px;
+			border: 5px solid black;
+
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-gap: 10px;
+
+			overflow: auto;
+			background-color: #092f4b;
+		}
+
+		.catlogue-item{
+			width: 500px;
+			height: 400px;
+			border-radius: 10px;
+			background-color: #FFF;
+			object-fit: cover;
+		}
+
+		.catlogue-item img{
+			width: 100%;
+			height: 100%;
+			border: 3px solid #3882F6;
+			border-radius: 10px;
+		}
+
+		/**/
+		.section-content-III{
+			width: 70%;
+			max-width: 1350px;
+			margin: 75px auto;
+			background-color: #3882F6;
+			border-radius: 10px;
+
+			display: flex;
+			justify-content: space-between;
+			color: #fff;
+		}
+		.section-content-III div{
+			padding: 40px 15px;
+		}
+		.section-content-III div h3{
+			font-size: 1.5em;
+			font-weight: 700;
+		}
+		.section-content-III a button{
+			width: 200px;
+			font-size: 1.2em;
+			padding: 10px;
+			border-color: #fff;
+			border-radius: 7px;
+			background-color: #3882F6;
+			color: #fff;
+			margin: 40px 30px;
+			cursor: pointer;
+		}
+		/**/
+		footer{
+			background-color: #092f4b;
+			position: relative;
+			top: 60px;
+		}
+		.footer-content{
+			width: 70%;
+			max-width: 1350px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.footer-content p{
+			padding: 30px;
+			color: #fff;
+			font-size: 1em;
+			font-weight: 300;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav-container">
+		<nav class="navbar">
+			<div class="nav-brand">
+				<h2>Header logo</h2>
+			</div>
+			<ul class="navbar-nav">
+				<li class="navbar-link"><a href="#">header link one</a></li>
+				<li class="navbar-link"><a href="#">header link two</a></li>
+				<li class="navbar-link"><a href="#">header link three</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="header-container">
+		<header>
+			<div class="title">
+				<h1>This website is awesome</h1>
+				<p>
+					This website has some subtext that goes here under the main title. 
+					It is a lower font and the color is lower constrast is
+				</p>
+				<a href="#"><button type="button">sign up</button></a>
+			</div>
+			<div class="title-img">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\header_img.jpg">
+			</div>
+		</header>
+	</div>
+
+	<section>
+		<div class="section-content">
+		<h2>some random information</h2>
+		<div class="gallery">
+			<div class="img">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img1.jpg">
+				<h3>Farmhouse</h3>
+			</div>
+			<div class="img">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img2.jpg">
+				<h3>Barndomimium</h3>
+			</div>
+			<div class="img">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img3.jpg">
+				<h3>Modern House</h3>
+			</div>
+			<div class="img">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img4.jpg">
+				<h3>Contemporary English House</h3>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="section-content-II">
+		<p>
+		This is an inspiring quote or a testimonial of a customer Maybe its just filling up space, or maybe people will actually read it. Who knows? All that i know is it looks nice
+		</p>
+		<span>-Thor, The god of Thunder</span>
+		
+	</div>
+	</section>
+
+	<section>
+		<div class="catlogue">
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img6.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img5.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img26.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img8.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img9.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img11.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img12.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img13.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img14.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img15.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img16.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img17.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img18.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img21.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img24.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img23.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img20.jpg">
+			</div>
+			<div class="catlogue-item">
+				<img src="C:\Users\Damonstarkk\Documents\web develooment\odins\assignment\images\img21.jpg">
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="section-content-III">
+			<div>
+			<h3>call to action, its time!</h3>
+			<p>sign up for our product by clicking that button over there</p>
+		</div>
+			<a href="#"><button type="button">sign up</button></a>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-content">
+			<div>
+				<a href="">Terms of Service</a>
+				<a href="">Private and Policy</a>
+			</div>
+			<p>Copyright &copy The Odin Project 2021</p>
+		</div>
+	</footer>
+</body>
+</html>
